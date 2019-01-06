@@ -3,6 +3,7 @@ import Titles from "./components/Title.jsx";
 import Form from "./components/Form.jsx";
 import Weather from "./components/Weather.jsx";
 
+
 const API_KEY = "cbc0082f79abbf0d63622dec372e8a41";
 
 class App extends React.Component {
@@ -48,16 +49,26 @@ class App extends React.Component {
     render(){
         return(
             <div>
-                <Titles />
-                <Form getWeather={this.getWeather}/>
-                <Weather 
-                    temperature={this.state.temperature}
-                    city={this.state.city}
-                    country={this.state.country}
-                    humidity={this.state.humidity}
-                    description={this.state.description}
-                    error={this.state.error}
-                    />
+                <div className="wrapper">
+                    <div className="main">
+                        <div className="container">
+                            <div className="title-container">
+                                <Titles />
+                            </div>
+                            <div className="form-container">
+                                <Form getWeather={this.getWeather}/>
+                                <Weather 
+                                    temperature={this.state.temperature}
+                                    city={this.state.city}
+                                    country={this.state.country}
+                                    humidity={this.state.humidity}
+                                    description={this.state.description}
+                                    error={this.state.error}
+                                />
+                        </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }
