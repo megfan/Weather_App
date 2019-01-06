@@ -22455,7 +22455,7 @@ var App = function (_React$Component) {
             e.preventDefault();
             var city = e.target.elements.city.value;
             var country = e.target.elements.country.value;
-            fetch("http://api.openweathermap.org/data/2.5/weather?q=" + city + "," + country + "&APPID=" + API_KEY + "&units=metric", {
+            fetch("https://api.openweathermap.org/data/2.5/weather?q=" + city + "," + country + "&APPID=" + API_KEY + "&units=metric", {
                 method: 'GET'
             }).then(function (res) {
                 return res.json();
